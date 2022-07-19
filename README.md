@@ -1,6 +1,6 @@
-# {{FRIENDLY_NAME}}
+# Match3 Persistence
 
-{{DESCRIPTION}}
+Persistence utils for com.facticus.mach3 package
 
 ## License
 

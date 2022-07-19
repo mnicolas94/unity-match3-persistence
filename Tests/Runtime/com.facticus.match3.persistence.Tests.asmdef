@@ -1,7 +1,7 @@
 {
-  "name": "com.{{COMPANY}}.{{REPOSITORY_NAME}}.Editor.Tests",
+  "name": "com.facticus.match3.persistence.Tests",
   "references": [
-    "com.{{COMPANY}}.{{REPOSITORY_NAME}}"
+    "Unity.com.facticus.match3.persistence"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"
