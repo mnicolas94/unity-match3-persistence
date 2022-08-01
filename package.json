@@ -1,6 +1,6 @@
 {
   "name": "com.facticus.match3.persistence",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Match3 Persistence",
   "description": "Persistence utils for com.facticus.mach3 package",
   "unity": "2021.1",
