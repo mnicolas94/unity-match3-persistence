@@ -19,7 +19,7 @@ namespace Match3.Persistence
             return dict.ContainsKey(skill) ? dict[skill] : 0;
         }
 
-        public static void AddSkillCount(Skill skill, int count)
+        public static void AddSkillCount(Skill skill, int count = 1)
         {
             var dict = Instance._skillsCount;
             if (dict.ContainsKey(skill))
