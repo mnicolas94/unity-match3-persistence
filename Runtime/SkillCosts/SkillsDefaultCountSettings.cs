@@ -12,7 +12,8 @@ namespace BoardCores.Settings
         public static SkillCountDictionary GetDefaultCountsCopy()
         {
             var copy = new SkillCountDictionary();
-            copy.CopyFrom(Instance._defaultSkillsCount);
+            if (Instance != null)
+                copy.CopyFrom(Instance._defaultSkillsCount);
             return copy;
         }
     }

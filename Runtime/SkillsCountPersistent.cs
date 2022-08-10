@@ -9,7 +9,7 @@ using Utils;
 namespace Match3.Persistence
 {
     [CreateAssetMenu(fileName = "SkillsCountPersistent", menuName = "Match3/Persistent/SkillsCountPersistent", order = 0)]
-    public class SkillsCountPersistent : ScriptableObjectSingleton<SkillsCountPersistent>, IPersistent
+    public class SkillsCountPersistent : ScriptableObjectSingleton<SkillsCountPersistent>, IPersistentResetable
     {
         [SerializeField] private SkillCountDictionary _skillsCount;
 
@@ -57,10 +57,6 @@ namespace Match3.Persistence
             return consumed;
         }
         
-        #region IPersistent
-
-        public string PersistentFileName => "sklcount";
-        
         public void ResetToDefault()
         {
             Reset();
@@ -70,12 +66,5 @@ namespace Match3.Persistence
         {
             _skillsCount = SkillsDefaultCountSettings.GetDefaultCountsCopy();
         }
-
-        public bool ReadPreviousVersion(string version, byte[] data)
-        {
-            return true;
-        }   
-
-        #endregion
     }
 }

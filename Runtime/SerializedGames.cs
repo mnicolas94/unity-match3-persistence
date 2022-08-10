@@ -8,26 +8,10 @@ using Utils.Attributes;
 namespace Match3.Persistence
 {
     [CreateAssetMenu(fileName = "SerializedGames", menuName = "Match3/Persistent/SerializedGames", order = 0)]
-    public class SerializedGames : ScriptableObjectSingleton<SerializedGames>, IPersistent
+    public class SerializedGames : ScriptableObjectSingleton<SerializedGames>
     {
         [SerializeField] private int _maxCount;
         [SerializeField, ToStringLabel] private List<SerializableGame> _games;
-
-        #region IPersistent implementation
-
-        public string PersistentFileName => "games";
-        
-        public void ResetToDefault()
-        {
-            _games.Clear();
-        }
-
-        public bool ReadPreviousVersion(string version, byte[] data)
-        {
-            return true;
-        }
-
-        #endregion
 
         public void Add(SerializableGame item)
         {
