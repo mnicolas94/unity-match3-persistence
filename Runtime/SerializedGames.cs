@@ -11,7 +11,7 @@ namespace Match3.Persistence
     public class SerializedGames : ScriptableObjectSingleton<SerializedGames>
     {
         [SerializeField] private int _maxCount;
-        [SerializeField, ToStringLabel] private List<SerializableGame> _games;
+        [SerializeField, ToStringLabel] private List<SerializableGame> _games = new List<SerializableGame>();
 
         public void Add(SerializableGame item)
         {
